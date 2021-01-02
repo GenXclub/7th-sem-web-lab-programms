@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="student.css"?>
+<students>
+    <student>
+        <sname>ABCD</sname>
+        <usn>1RG17CS017</usn>
+        <college>RGIT</college>
+        <branch>CSE</branch>
+        <yoj>2017</yoj>
+        <email>abcd@gmail.com</email>
+    </student>
+    <student>
+        <sname>QWERT</sname>
+        <usn>1RG17CS047</usn>
+        <college>RGIT</college>
+        <branch>CSE</branch>
+        <yoj>2017</yoj>
+        <email>qwert@gmail.com</email>
+    </student>
+    <student>
+        <sname>XYZ</sname>
+        <usn>1RG17CS007</usn>
+        <college>RGIT</college>
+        <branch>CSE</branch>
+        <yoj>2017</yoj>
+        <email>xyz@gmail.com</email>
+    </student>
+</students>

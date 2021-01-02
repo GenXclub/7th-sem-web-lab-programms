@@ -1,0 +1,86 @@
+From 1321b5574e82d0b062d735c0db41cf0a8e1371fb Mon Sep 17 00:00:00 2001
+From: DarkSchokolade <suhaskshetty111@gmail.com>
+Date: Sat, 26 Dec 2020 13:14:55 +0000
+Subject: [PATCH] Create Patch File
+
+---
+ __pycache__/client3.cpython-38.pyc | Bin 0 -> 1050 bytes
+ client3.py                         |  30 +++++------------------------
+ 2 files changed, 5 insertions(+), 25 deletions(-)
+ create mode 100644 __pycache__/client3.cpython-38.pyc
+
+diff --git a/__pycache__/client3.cpython-38.pyc b/__pycache__/client3.cpython-38.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..c70ebd4929a6542fc3995988cf75ae66575a40aa
+GIT binary patch
+literal 1050
+zcmYjQ&rcIU6rS0g-EN^EBD4}ctcgUMh{X^SB>o@~E(WncI55#{md-0IY<J7-)P!12
+z^$#gWuO9q2ywBBx@$Si!Z>B<=&AcD8Z|8mUeY5*hQxgQo_oqLj`;3quCi#DqF<Hl1
+zd_yCMpef<hdWSpKyWF*&aV8w@377kV3GXxECE<$_`T)uzICbP#n1D&}hjd6c$OpkI
+z;Etw%o=lH!fH#@}He#3Ll3vo$P2>42%wpX`ehW%)Ye?TSKF8;ImDk|5D8n4gLltUm
+zRwYA9$(h2{2?(GDwW0HGZA;KSQlI>V*vWSP-my~MwMHY&TXA}v7iw*Fd3CvQ)&qI|
+zDiJR}T_nFLAuXKO!@~%9A+K>3>u3hZ!2-FU%0$ir5$*!^zi@2Mu5)+b4BQ$K-W_tm
+z2GnE&)@F#t@2`bTnTuWv!Z=OCydA1z2r~cyBK#PqJt#tzhewcsj1?AzB35xXPcjv1
+zuTXjGRF_oVjSdr`y{=4JFwW!R^p}GW>r{K~G>=u?)81JxS0K%@F5?H$xW0_F<4~H@
+zeIarZ-JfTT<Gce6*~_qZ<4yDJ(%W|%`&*k&mYN4EOS_xRt;R{W6Lk=M3el5BD@`C%
+zE04S9x^e_+193JD&I)c;*o)-`bOxUal~cIZGB~b=iOsas&S5a1g5ou)2(pLd4(J{9
+zb!S@|JuJSu!%G%_6ki30_Qlwkt~x**yRl00dCUqQ4WR*Lj-0k{qo@-nSrqjj>=<H1
+zxLAa-3LhdhYm3FB5P7lQw!x_05A1GOS6|@MJ(;G-;bRGSX$r;tajuz4I>6aUk!ReO
+zaVGK(_jdL-cMmk(wkN-CpT!-BBFz$1MSEC#1e!+LL%l@7OIJIWaOb=WnfBYc?8Hhl
+z39-<=m9vlm9>$6)%?~OK)mBJ*A2RhHDMnX0X6E@=x0i;`;x3v1nZd_pE^~r%Pzu}`
+J8d}Aw&R;2)1C0Ox
+
+literal 0
+HcmV?d00001
+
+diff --git a/client3.py b/client3.py
+index f1771c3..73f89e8 100644
+--- a/client3.py
++++ b/client3.py
+@@ -1,23 +1,3 @@
+-################################################################################
+-#
+-#  Permission is hereby granted, free of charge, to any person obtaining a
+-#  copy of this software and associated documentation files (the "Software"),
+-#  to deal in the Software without restriction, including without limitation
+-#  the rights to use, copy, modify, merge, publish, distribute, sublicense,
+-#  and/or sell copies of the Software, and to permit persons to whom the
+-#  Software is furnished to do so, subject to the following conditions:
+-#
+-#  The above copyright notice and this permission notice shall be included in
+-#  all copies or substantial portions of the Software.
+-#
+-#  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+-#  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+-#  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+-#  DEALINGS IN THE SOFTWARE.
+-
+ import urllib.request
+ import time
+ import json
+@@ -35,14 +15,14 @@ def getDataPoint(quote):
+ 	stock = quote['stock']
+ 	bid_price = float(quote['top_bid']['price'])
+ 	ask_price = float(quote['top_ask']['price'])
+-	price = bid_price
++	price = (bid_price + ask_price)/2
+ 	return stock, bid_price, ask_price, price
+ 
+ def getRatio(price_a, price_b):
+-	""" Get ratio of price_a and price_b """
+-	""" ------------- Update this function ------------- """
+-	""" Also create some unit tests for this function in client_test.py """
+-	return 1
++  if (price_b == 0):
++    return
++
++  return price_a/price_b
+ 
+ # Main
+ if __name__ == "__main__":
+-- 
+2.17.1
+

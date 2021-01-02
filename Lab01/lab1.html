@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+    <center>
+        <h1>Simple calculator using Javascript</h1>
+        <table>
+            <tr>
+                <th>Enter 1st number</th>
+                <td><input type="text" name="num1" id="num1" /></td>
+            </tr>
+            <tr>
+                <th>Enter 2nd number</th>
+                <td><input type="number" name="num2" id="num2" /></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="+" onclick="calculate(this.value)" />
+                    <input type="button" value="-" onclick="calculate(this.value)" />
+                    <input type="button" value="*" onclick="calculate(this.value)" />
+                    <input type="button" value="/" onclick="calculate(this.value)" />
+                </th>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td><input type="text" name="result" id="result" readonly></td>
+            </tr>
+        </table>
+    </center>
+    <script src="./lab1.js"></script>
+</body>
+</html>
