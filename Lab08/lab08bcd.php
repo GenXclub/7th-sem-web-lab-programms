@@ -1,3 +1,9 @@
+<!-- 
+	Q8. Write the PHP programs to do the following:
+		b. Find the transpose of a matrix.
+		c. Multiplication of two matrices.
+		d. Addition of two matrices
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
